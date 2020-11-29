@@ -1,0 +1,92 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu';
+    color: #fff;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2 {
+    font-family: 'SFProDisplay', sans-serif;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+address {
+    font-style: normal;
+}
+
+.container {
+    max-width: 1278px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.main-section {
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 75px;
+    padding-bottom: 50px;
+}
+
+.section {
+    background-image: url(../img/bg-2.jpg);
+    min-height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.scroll-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 0;
+    padding-bottom: 30px;
+    padding-top: 13px;
+}
+
+.section__title {
+    font-size: 44px;
+    line-height: 55px;
+    font-weight: 400;
+    padding-left: 26px;
+}
+
+.content {
+    padding-left: 56px;
+}

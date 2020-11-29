@@ -1,0 +1,57 @@
+.logo {
+    display: flex;
+    align-items: center;
+    &__text {
+        margin-left: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.04em;
+        line-height: 21px;
+    }
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    color: #fff;
+    padding-top: 30px;
+    font-size: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    &__menu-list {
+        display: flex;
+        list-style: none;
+    }
+    &__menu-item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+    &__contacts {
+        font-style: normal;
+    }
+    &__purchase {
+        padding: 8px 28px;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        border-radius: 3px;
+        margin-right: 8px;
+        transition: 0.3s;
+        &:hover {
+            background-color: #fff;
+            color: #000;
+        }
+    }
+    &__phone {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
