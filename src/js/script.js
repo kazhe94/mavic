@@ -16,7 +16,7 @@ function testWebP(callback) {
     }
     });
 
-
+//accordion
 const dropdown = document.querySelectorAll('.accordion__dropdown');
 const questions = document.querySelectorAll('.accordion__item');
 
@@ -27,3 +27,37 @@ dropdown.forEach((item)=>item.addEventListener('click',  (e)=> {
         target.parentElement.classList.add('accordion__item--active')
     }
 }))
+
+
+//slider
+const prevBtn = document.querySelector('.left-btn');
+const nextBtn = document.querySelector('.right-btn');
+const slides = document.querySelectorAll('.about__slides img');
+let slideIndex = 1;
+
+slides.forEach((item, i)=> {
+    item.setAttribute('index', i);
+})
+showSlide(slideIndex);
+
+function showSlide(index) {
+    if (index < 1) {
+        slideIndex = slides.length
+    } else if (index > slides.length) {
+        slideIndex = 1;
+    }
+    slides.forEach(item => item.style.display = "none");
+    slides[slideIndex - 1].style.display = "block";
+}
+
+function changeSlide(index) {
+    showSlide(slideIndex += index)
+}
+
+nextBtn.addEventListener('click', ()=> {
+    changeSlide(+1)  
+})
+
+prevBtn.addEventListener('click', ()=> {
+    changeSlide(-1)    
+})

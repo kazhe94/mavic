@@ -38,25 +38,26 @@
         </a>
     </section>
 
-    <section id="about" class="section about-section">
+    <section id="about" class="section about">
         <div class="container">
             <h2 class="section__title">Что такое Mavic 2 Pro?</h2>
-            <div class="content about-section__content">
+            <div class="content about__content">
                 <div class="section__text">
                     <p>Дрон Mavic 2 Pro - это инженерное чудо, идеальное для аэросъемки. Дрон обладает всеми лучшими технологиями DJI, он преобразит мир аэросъемки.</p>
                     <p>Mavic 2 Pro оснащен совершенно новой камерой Hasselblad L1D-20c. Камера L1D-20c работает по уникальной технологии Hasselblad Natural Colour Solution (HNCS)5, позволяющей пользователям делать великолепные снимки с воздуха с разрешением в 20 мегапикселей и потрясающими цветами.</p>
                 </div>
                 <div class="slider-wrapper">
-                    <div class="about-slider swiper-container">
+                    <div class="about__slider">
                         <div class="slider-text">Лучшая беспилотная технология аэросъемки</div>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="slider-img" src="img/slider/slider-img1.jpg" alt="slider-img">
-                            </div>
+                        <div class="about__slides">
+                            <img class="slider-img" src="img/slider/slider-img1.jpg" alt="slider-img">
+                            <img class="slider-img" src="img/slider/portfolio1.png" alt="slider-img">
+                            <img class="slider-img" src="img/slider/portfolio2.png" alt="slider-img">
+                            <img class="slider-img" src="img/slider/portfolio3.png" alt="slider-img">
                         </div>
                         <div class="slider-nav-btns">
-                            <button class="slider-btn left-btn swiper-button-prev"></button>
-                            <button class="slider-btn right-btn swiper-button-next"></button>
+                            <button class="slider-btn left-btn"></button>
+                            <button class="slider-btn right-btn"></button>
                         </div>
                     </div>
                 </div>
@@ -134,7 +135,7 @@
                             <h4 class="specification__title">Dlog-M 10 бит</h4>
                             <p class="specification__desc">Mavic 2 Pro поддерживает цветовой профиль Dlog-M 10 бит с более широким динамическим диапазоном, дающим больше возможностей для цветокоррекции.</p>
                         </div>
-                        <div class="specification__item">
+                        <div class="specification__item item-2">
                             <h4 class="specification__title">Камера Hasselblad</h4>
                             <p class="specification__desc">Камера Hasselblad L1D-20С известны эргономичным дизайном и превосходным качеством изображений. </p>
                         </div>
@@ -144,7 +145,7 @@
                             <h4 class="specification__title">Матрица CMOS 1</h4>
                             <p class="specification__desc">Зона активной работы новой 1-дюймовой матрицы CMOS в четыре раза превышает показатели Mavic Pro</p>
                         </div>
-                        <div class="specification__item">
+                        <div class="specification__item item-4">
                             <h4 class="specification__title">Видео HDR</h4>
                             <p class="specification__desc">Благодаря поддержке видео 4K HDR 10 бит, Mavic 2 Pro можно подсоединить к совместимому с HLG 4K ТВ и просматривать запись в полном цветовом спектре</p>
                         </div>
@@ -237,9 +238,9 @@
                     <fieldset class="fieldset">
                         <legend class="form-title">Остались вопросы?</legend>
                         <p class="form-subtitle">Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
-                        <input type="text" class="name-input form-input" placeholder="Ваше имя">
-                        <input type="text" class="email-input form-input" placeholder="Ваше e-mail">
-                        <textarea type="text" class="message-input form-input" placeholder="Что вас интересует?"></textarea>
+                        <input type="text" class="name-input form-input" placeholder="Ваше имя" required>
+                        <input type="email" class="email-input form-input" placeholder="Ваше e-mail" required>
+                        <textarea type="text" class="message-input form-input" placeholder="Что вас интересует?" required></textarea>
                     </fieldset>
                     <button type="submit" class="form-btn">Отправить</button>
                 </form>

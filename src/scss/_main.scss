@@ -60,7 +60,7 @@
     margin-bottom: 25px;
 }
 
-.about-section__content {
+.about__content {
     padding-left: 56px;
 }
 
@@ -77,10 +77,31 @@
     display: flex;
     justify-content: flex-end;
     margin-top: -143px;
-}
-.about-slider {
     position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 560px;
+        height: 300px;
+        border: 4px solid #FFFFFF;
+        top: -15px;
+        right: -17px;
+        z-index: 0;
+    }
 }
+.about__slider {
+    position: relative;
+    z-index: 2;
+}
+
+.about__slides {
+    width: 560px;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+}
+
 .slider-text {
     position: absolute;
     bottom: 78px;
@@ -111,6 +132,10 @@
 }
 .slider-img {
     vertical-align: bottom;
+    display: none;
+}
+.active {
+    display: block;
 }
 
 .features {
@@ -218,6 +243,12 @@
     }
     &__item {
         width: 280px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+        }
     }
     &__title {
         margin-bottom: 10px;
@@ -230,6 +261,36 @@
         font-size: 15px;
         line-height: 130%;
     }
+}
+
+.item-1::after {
+    background-image: url(../img/lines/pointer-1.svg);
+    background-repeat: no-repeat;
+    width: 229px;
+    height: 114px;
+    top: 15px;
+    right: -130px;
+}
+.item-2::after {
+    background: url(../img/lines/pointer-2.svg) no-repeat;
+    width: 346px;
+    height: 81px;
+    top:-60px;
+    right: -268px;
+}
+.item-3::after {
+    background: url(../img/lines/pointer-3.svg) no-repeat;
+    width: 258px;
+    height: 103px;
+    top: 16px;
+    left: -276px;
+}
+.item-4::after {
+    background: url(../img/lines/pointer-4.svg) no-repeat;
+    width: 124px;
+    height: 89px;
+    top: -70px;
+    left: -140px;
 }
 
 .dropdown-arrow {
@@ -332,6 +393,9 @@
         font-weight: 300;
         font-size: 15px;
         line-height: 130%;
+    }
+    &__phone {
+        margin-bottom: 5px;
     }
     &__social-item {
         &:not(:last-child) {
