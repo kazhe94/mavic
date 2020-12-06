@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    @@include("./_header.html")
-    <section class="main-section">
+    <div class="site-container">
+        @@include("./_header.html")
+    <section class="main-section" id="main">
         <div class="container">
             <div class="main-section__content">
                 <h1 class="main-title">Mavic 2 Pro</h1>
@@ -43,8 +44,8 @@
             <h2 class="section__title">Что такое Mavic 2 Pro?</h2>
             <div class="content about__content">
                 <div class="section__text">
-                    <p>Дрон Mavic 2 Pro - это инженерное чудо, идеальное для аэросъемки. Дрон обладает всеми лучшими технологиями DJI, он преобразит мир аэросъемки.</p>
-                    <p>Mavic 2 Pro оснащен совершенно новой камерой Hasselblad L1D-20c. Камера L1D-20c работает по уникальной технологии Hasselblad Natural Colour Solution (HNCS)5, позволяющей пользователям делать великолепные снимки с воздуха с разрешением в 20 мегапикселей и потрясающими цветами.</p>
+                    <p class="section__text-par">Дрон Mavic 2 Pro - это инженерное чудо, идеальное для аэросъемки. Дрон обладает всеми лучшими технологиями DJI, он преобразит мир аэросъемки.</p>
+                    <p class="section__text-par">Mavic 2 Pro оснащен совершенно новой камерой Hasselblad L1D-20c. Камера L1D-20c работает по уникальной технологии Hasselblad Natural Colour Solution (HNCS)5, позволяющей пользователям делать великолепные снимки с воздуха с разрешением в 20 мегапикселей и потрясающими цветами.</p>
                 </div>
                 <div class="slider-wrapper">
                     <div class="about__slider">
@@ -264,6 +265,7 @@
             </div>
         </div>
     </section>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -42,11 +42,18 @@ address {
     font-style: normal;
 }
 
+.site-container {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1278px;
     width: 100%;
     padding: 0 20px;
     margin: 0 auto;
+    @media screen and (max-width: 590px) {
+        padding: 0 10px;
+    }
 }
 
 .main-section {
@@ -68,6 +75,9 @@ address {
     background-repeat: no-repeat;
     padding-top: 150px;
     padding-bottom: 50px;
+    @media screen and (max-width: 1160px) {
+        padding-top: 100px;
+    }
 }
 
 .scroll-btn {
@@ -85,6 +95,9 @@ address {
     line-height: 55px;
     font-weight: 400;
     padding-left: 26px;
+    @media screen and (max-width: 660px) {
+        font-size: 36px;
+    }
 }
 
 .content {

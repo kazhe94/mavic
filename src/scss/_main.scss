@@ -31,7 +31,11 @@
 		-1px -1px 0   #000000,
 		 1px -1px 0   #000000,
 		-1px  1px 0   #000000,
-		 1px  1px 0   #000000;
+         1px  1px 0   #000000;
+         @media screen and (max-width: 590px) {
+            margin-bottom: 100px;
+            width: 288px;
+        }
     }
     &__social {
         display: flex;
@@ -58,52 +62,89 @@
     font-size: 96px;
     line-height: 115px;
     margin-bottom: 25px;
+    @media screen and (max-width: 590px) {
+        display: none;
+    }
 }
 
 .about__content {
     padding-left: 56px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 960px) {
+        display: block;
+    }
 }
 
 .section__text {
     max-width: 440px;
     width: 100%;
-    font-size: 300px;
+    font-weight: 300;
     font-size: 17px;
     line-height: 150%;
     margin-top: 55px;
+    padding-right: 20px;
+    @media screen and (max-width: 960px) {
+        max-width: 100%;
+        margin-top: 30px;
+        padding-right: 0;
+    }
+    @media screen and (max-width: 660px) {
+        font-size: 15px;
+        margin-top: 14px;
+    }
 }
-
+.section__text-par:first-child {
+    margin-bottom: 30px;
+    @media screen and (max-width: 960px) {
+        margin-bottom: 14px;
+    }
+}
 .slider-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -143px;
+    margin-top: 97px;
+    padding-right: 20px;
+    position: relative;
+    @media screen and (max-width: 1160px) {
+        margin-top: 60px;
+    }
+    @media screen and (max-width: 960px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+.about__slider {
     position: relative;
     &::after {
         content: "";
         position: absolute;
         display: block;
-        width: 560px;
-        height: 300px;
+        max-width: 560px;
+        width: 100%;
+        max-height: 300px;
+        height: 100%;
         border: 4px solid #FFFFFF;
         top: -15px;
         right: -17px;
         z-index: 0;
     }
 }
-.about__slider {
-    position: relative;
-    z-index: 2;
-}
 
 .about__slides {
-    width: 560px;
+    max-width: 560px;
     height: 300px;
     display: flex;
+    position: relative;
+    z-index: 2;
     overflow: hidden;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
 .slider-text {
     position: absolute;
+    z-index: 3;
     bottom: 78px;
     left: -251px;
     max-width: 281px;
@@ -112,6 +153,16 @@
     font-size: 24px;
     line-height: 28px;
     text-align: right;
+    @media screen and (max-width: 1160px) {
+        top: -75px;
+        bottom: 0;
+        right: 0;
+        left: 275px;
+        font-size: 22px;
+    }
+    @media screen and (max-width: 960px) {
+        display: none;
+    }
 }
 .slider-nav-btns {
     display: flex;
@@ -315,6 +366,9 @@
                 width: 319px;
                 height: 125px;
                 background-image: url(../img/questions-drone.png);
+                @media screen and (max-width: 1160px) {
+                    display: none;
+                }
             }
         }
         &--active {

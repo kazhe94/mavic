@@ -7,6 +7,9 @@
         font-size: 18px;
         letter-spacing: 0.04em;
         line-height: 21px;
+        @media screen and (max-width: 1160px) {
+            display: none;
+        }
     }
 }
 .header-content {
@@ -26,6 +29,11 @@
     left: 0;
     right: 0;
     z-index: 10;
+    &__menu {
+        @media screen and (max-width: 1160px) {
+            display: none;
+        }
+    }
     &__menu-list {
         display: flex;
         list-style: none;
@@ -53,5 +61,47 @@
     &__phone {
         font-size: 16px;
         font-weight: 700;
+        @media screen and (max-width: 1160px) {
+            display: none;
+        }
     }
+}
+
+.header-burger {
+    width: 24px;
+    height: 14px;
+    background: transparent;
+    display: none;
+    @media screen and (max-width: 1160px) {
+        display: block;
+    }
+    &:hover {
+        &::after {
+            width: 24px;
+        }
+    }
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #E0E0E0;
+    }
+    &::before {
+        margin-bottom: 4px;
+    }
+    &::after {
+        transition: .3s;
+        width: 16px;
+        margin-left: auto;
+        margin-top: 4px;
+    }
+}
+
+.burger-line {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #E0E0E0;
 }
