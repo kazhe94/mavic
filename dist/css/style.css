@@ -1003,6 +1003,11 @@ address {
     font-size: 14px;
   }
 
+  .accordion__answer {
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
   .contacts__content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
