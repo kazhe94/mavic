@@ -155,6 +155,16 @@ address {
   padding-left: 56px;
 }
 
+.phone {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 .main-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,16 +322,48 @@ address {
   width: 60px;
   height: 48px;
   border: none;
-}
-
-.left-btn {
   background-color: #1C1C1C;
-  background: url(../img/slider/arrow-left.svg) no-repeat center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
-.right-btn {
-  background: url(../img/slider/arrow-right.svg) no-repeat center;
+.slider-btn:hover {
   background-color: #fff;
+}
+
+.slider-btn:hover .btn-arrow {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.btn-arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.left-btn .btn-arrow {
+  -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.right-btn .btn-arrow {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .slider-img {
@@ -729,6 +771,15 @@ address {
   color: #fff;
   text-transform: uppercase;
   margin-top: 20px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  background-color: #fff;
+  color: black;
 }
 
 .logo {
@@ -781,6 +832,16 @@ address {
   list-style: none;
 }
 
+.header__menu-item {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.header__menu-item:hover {
+  color: #a1a1a1;
+}
+
 .header__menu-item:not(:last-child) {
   margin-right: 20px;
 }
@@ -805,11 +866,6 @@ address {
   color: #000;
 }
 
-.header__phone {
-  font-size: 16px;
-  font-weight: 700;
-}
-
 .header-burger {
   width: 24px;
   height: 14px;
@@ -828,6 +884,12 @@ address {
   width: 24px;
   height: 2px;
   background-color: #E0E0E0;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .header-burger::before {
@@ -835,12 +897,26 @@ address {
 }
 
 .header-burger::after {
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
   width: 16px;
   margin-left: auto;
   margin-top: 4px;
+}
+
+.header-burger--active::before {
+  -webkit-transform: translateY(-6px) rotate(45deg);
+      -ms-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg);
+}
+
+.header-burger--active::after {
+  -webkit-transform: translateY(5px) rotate(-45deg);
+      -ms-transform: translateY(5px) rotate(-45deg);
+          transform: translateY(5px) rotate(-45deg);
+  width: 24px;
+}
+
+.header-burger--active .burger-line {
+  height: 0;
 }
 
 .burger-line {
@@ -848,6 +924,12 @@ address {
   width: 24px;
   height: 2px;
   background-color: #E0E0E0;
+}
+
+.burger__phone {
+  margin-top: 33px;
+  padding-top: 33px;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
 }
 
 @media screen and (max-width: 7300px) {
@@ -933,12 +1015,54 @@ address {
     display: none;
   }
 
+  .logo {
+    position: relative;
+    z-index: 10;
+  }
+
   .logo__text {
     display: none;
   }
 
   .header__menu {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 140px;
+    background-color: rgba(28, 28, 28, 0.9);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    top: -100%;
+  }
+
+  .header__menu--active {
+    top: 0;
+  }
+
+  .header__menu-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .header__menu-item:not(:last-child) {
+    margin-bottom: 35px;
+  }
+
+  .header__menu li {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .header__purchase {
+    position: relative;
+    z-index: 10;
   }
 
   .header__phone {
@@ -947,6 +1071,8 @@ address {
 
   .header-burger {
     display: block;
+    position: relative;
+    z-index: 10;
   }
 }
 

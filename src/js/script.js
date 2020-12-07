@@ -16,6 +16,28 @@ function testWebP(callback) {
     }
     });
 
+//menu
+const burger = document.querySelector('.header-burger');
+const menu = document.querySelector('.header__menu');
+const links = document.querySelectorAll('.header__menu-item');
+
+burger.addEventListener('click', (e)=> {
+    e.preventDefault();
+    menu.classList.toggle('header__menu--active');
+    burger.classList.toggle('header-burger--active');
+    document.querySelector('body').classList.toggle('stop-scroll');
+})
+
+links.forEach((link)=> {
+    link.addEventListener('click', ()=> {
+        if(menu.classList.contains('header__menu--active')) {
+            menu.classList.remove('header__menu--active');
+            burger.classList.remove('header-burger--active');
+            document.querySelector('body').classList.remove('stop-scroll')
+        }
+    });    
+})
+
 //accordion
 const dropdown = document.querySelectorAll('.accordion__dropdown');
 const questions = document.querySelectorAll('.accordion__item');

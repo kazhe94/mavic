@@ -1,6 +1,10 @@
 .logo {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1160px) {
+        position: relative;
+        z-index: 10;
+    }
     &__text {
         margin-left: 10px;
         font-weight: 500;
@@ -31,7 +35,32 @@
     z-index: 10;
     &__menu {
         @media screen and (max-width: 1160px) {
-            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding-top: 140px;
+            background-color: rgba(#1C1C1C, 0.9);
+            transition: 0.5s;
+            top: -100%;
+            &--active {
+                top: 0;
+            }
+            &-list {
+                flex-direction: column;
+            }
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 35px;
+                }
+            }
+            li {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
         }
     }
     &__menu-list {
@@ -39,6 +68,10 @@
         list-style: none;
     }
     &__menu-item {
+        transition: .3s;
+        &:hover {
+            color: rgb(161, 161, 161);
+        }
         &:not(:last-child) {
             margin-right: 20px;
         }
@@ -53,14 +86,16 @@
         border-radius: 3px;
         margin-right: 8px;
         transition: 0.3s;
+        @media screen and (max-width: 1160px) {
+            position: relative;
+            z-index: 10;
+        }
         &:hover {
             background-color: #fff;
             color: #000;
         }
     }
     &__phone {
-        font-size: 16px;
-        font-weight: 700;
         @media screen and (max-width: 1160px) {
             display: none;
         }
@@ -74,6 +109,8 @@
     display: none;
     @media screen and (max-width: 1160px) {
         display: block;
+        position: relative;
+        z-index: 10;
     }
     &:hover {
         &::after {
@@ -87,21 +124,39 @@
         width: 24px;
         height: 2px;
         background-color: #E0E0E0;
+        transform-origin: left;
+        transition: .3s;
     }
     &::before {
         margin-bottom: 4px;
     }
-    &::after {
-        transition: .3s;
+    &::after {        
         width: 16px;
         margin-left: auto;
         margin-top: 4px;
     }
 }
-
+.header-burger--active {
+    &::before {
+        transform: translateY(-6px) rotate(45deg);
+    }
+    &::after {
+        transform: translateY(5px) rotate(-45deg);
+        width: 24px;
+    }
+    .burger-line {
+        height: 0;
+    }
+}
 .burger-line {
     display: block;
     width: 24px;
     height: 2px;
     background-color: #E0E0E0;
+}
+
+.burger__phone {
+    margin-top: 33px;
+    padding-top: 33px;
+    border-top: 1px solid rgba(#fff, 0.24);
 }
