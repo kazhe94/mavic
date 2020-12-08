@@ -927,9 +927,7 @@ address {
 }
 
 .burger__phone {
-  margin-top: 33px;
-  padding-top: 33px;
-  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  display: none;
 }
 
 @media screen and (max-width: 7300px) {
@@ -1073,6 +1071,12 @@ address {
     display: block;
     position: relative;
     z-index: 10;
+  }
+
+  .burger__phone {
+    margin-top: 33px;
+    padding-top: 33px;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
   }
 }
 
